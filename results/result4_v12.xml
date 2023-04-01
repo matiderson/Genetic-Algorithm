@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struct>
+    <iterations>17</iterations>
+    <best_fit_vector>0.0099844</best_fit_vector>
+    <best_fit_vector>0.0097419</best_fit_vector>
+    <best_fit_vector>0.0097419</best_fit_vector>
+    <best_fit_vector>0.0097419</best_fit_vector>
+    <best_fit_vector>0.0094961</best_fit_vector>
+    <best_fit_vector>0.0092537</best_fit_vector>
+    <best_fit_vector>0.0091156</best_fit_vector>
+    <best_fit_vector>0.0090787</best_fit_vector>
+    <best_fit_vector>0.0090751</best_fit_vector>
+    <best_fit_vector>0.0090185</best_fit_vector>
+    <best_fit_vector>0.0090185</best_fit_vector>
+    <best_fit_vector>0.0090128</best_fit_vector>
+    <best_fit_vector>0.0090123</best_fit_vector>
+    <best_fit_vector>0.0090123</best_fit_vector>
+    <best_fit_vector>0.0090123</best_fit_vector>
+    <best_fit_vector>0.0090123</best_fit_vector>
+    <best_fit_vector>0.0090123</best_fit_vector>
+    <best_fit_vector>0.0090102</best_fit_vector>
+    <mean_fit_vector>0.024223</mean_fit_vector>
+    <mean_fit_vector>0.02097</mean_fit_vector>
+    <mean_fit_vector>0.010242</mean_fit_vector>
+    <mean_fit_vector>0.010099</mean_fit_vector>
+    <mean_fit_vector>0.0098965</mean_fit_vector>
+    <mean_fit_vector>0.0098691</mean_fit_vector>
+    <mean_fit_vector>0.0096598</mean_fit_vector>
+    <mean_fit_vector>0.0092946</mean_fit_vector>
+    <mean_fit_vector>0.009356</mean_fit_vector>
+    <mean_fit_vector>0.0091087</mean_fit_vector>
+    <mean_fit_vector>0.0090853</mean_fit_vector>
+    <mean_fit_vector>0.0090529</mean_fit_vector>
+    <mean_fit_vector>0.0090696</mean_fit_vector>
+    <mean_fit_vector>0.0090226</mean_fit_vector>
+    <mean_fit_vector>0.0093337</mean_fit_vector>
+    <mean_fit_vector>0.009191</mean_fit_vector>
+    <mean_fit_vector>0.0091976</mean_fit_vector>
+    <mean_fit_vector>0.0090123</mean_fit_vector>
+    <solution>0.0090102</solution>
+    <solution_index>37</solution_index>
+    <solution_parameters>5.0798</solution_parameters>
+    <solution_parameters>0.75867</solution_parameters>
+    <solution_parameters>1.6956</solution_parameters>
+</struct>

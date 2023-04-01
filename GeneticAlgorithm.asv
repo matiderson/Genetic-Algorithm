@@ -1,0 +1,138 @@
+function output = GeneticAlgorithm(input)
+
+if ~ any([1, 2, 3, 4] == input.task_number)
+   input.task_number = 1;
+end
+
+contraints = [0.00005, 0.00001, 0.00005, 0.00001];
+contraint = contraints(input.task_number);
+
+children_number = ceil(input.population_size * input.crossover_rate);
+mutation_number = ceil(input.population_size * input.mutation_rate);
+
+if mod(children_number, 2) ~= 0 
+    if children_number < input.population_size
+        children_number = children_number + 1;
+    elseif children_number == input.population_size
+        children_number = children_number - 1;
+    end 
+end
+
+remaining_parents_number = input.population_size - children_number;
+
+output.iterations = 0;
+stall_iterations = 0;
+flag = true;
+
+%  vectors for storing informations about each generation
+output.best_fit_vector = zeros(input.max_generation + 1, 1);
+output.mean_fit_vector = zeros(input.max_generation + 1, 1);
+
+mx = 2^input.N - 1;
+k1 = (input.b - input.a) / mx;
+k2 = input.a;
+
+l = input.N * input.variables_number;
+
+% generataing next generations
+while output.iterations <= input.max_generation && flag
+
+    % decoding each individual
+    v = DecodePopulation(input.current_population, k1, k2, input.N, ...
+        input.variables_number, input.population_size);
+
+    fit_vector = zeros(input.population_size, 1);
+    
+    % calculating fitness value for each individual
+    for i = 1:input.population_size
+        fit_vector(i) = fit(v(i, :), input.task_number);
+    end
+    
+    % there's no need to generate 'max_generation + 1' generation
+    if output.iterations < input.max_generation
+        
+        % vector for storing parents
+        parents = zeros(children_number, l);
+        temp_population = input.current_population;
+        temp_population_size = input.population_size;
+
+        % choosing parents in tournament
+        for i = 1:children_number
+            [parents(i, :), index] = Tournament(temp_population, ...
+             fit_vector, temp_population_size, input.tournament_size);
+            
+            % we don't want situation when we get 2 childern from 1 parent
+            if mod(i,2) ~= 0
+                temp_population(index, :) = [];
+                temp_population_size = temp_population_size - 1;
+            else
+                temp_population = input.current_population;
+                temp_population_size = input.population_size;
+            end
+
+        end
+
+        % vector for storing children
+        children = zeros(children_number, l);
+        
+        % generating children
+        for i = 1:2:children_number - 1
+            [children(i, :), children(i + 1, :)] = ...
+                OnePointCrossover(parents(i, :), parents(i + 1, :), l);
+        end
+        
+        % choosing best parents that will remain in next generation
+        [~, best_parents_index] =...
+            mink(fit_vector, remaining_parents_number);
+        
+        % creating next generation
+        input.current_population(1:remaining_parents_number, :) = ...
+            input.current_population(best_parents_index, :);
+
+        input.current_population(remaining_parents_number + 1:end, :) =...
+            children;
+        
+        % mutating generation
+        input.current_population = Mutation(input.current_population,...
+            input.population_size, l, mutation_number);
+    end
+    
+    % calculationg best and mean fit's value
+    output.best_fit_vector(output.iterations + 1) = min(fit_vector);
+
+    output.mean_fit_vector(output.iterations + 1) = mean(fit_vector);
+    
+
+    % checking if we get any progress in generating new generations
+    if output.iterations > 0 &&...
+            abs(output.best_fit_vector(output.iterations + 1) -...
+            output.best_fit_vector(output.iterations)) < contraint
+        stall_iterations = stall_iterations + 1;
+    else
+        stall_iterations = 0;
+    end
+
+    % text with informations about generation
+    text = ['Iteration: ' num2str(output.iterations) ', Best: '...
+     num2str(output.best_fit_vector(output.iterations + 1), 4)...
+     ', Mean: ' num2str(output.mean_fit_vector(output.iterations + 1), 4)...
+     ', Stall iteration: ' num2str(stall_iterations)];
+
+    disp(text);
+
+    if stall_iterations == input.max_stall_iterations
+        flag = false;
+        output.best_fit_vector(output.iterations + 2:end) = [];
+        output.mean_fit_vector(output.iterations + 2:end) = [];
+    end
+
+    output.iterations = output.iterations + 1;
+
+end
+
+output.iterations = output.iterations - 1;
+
+[output.solution, output.solution_index] = min(fit_vector);
+output.solution_parameters = v(output.solution_index, :);
+
+end

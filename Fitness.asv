@@ -1,0 +1,38 @@
+function f = Fitness(x, task_number)
+
+assignin('base',"x",x);
+
+if task_number == 1
+    out = sim('Obiekt123.slx',[0 100]);
+    f = out.ise.Data(end);
+elseif task_number == 2
+    out = sim('Obiekt123.slx',[0 100]);
+    f = mean(out.total_error.Data(find(out.total_error.Time==20):end));
+elseif task_number == 3
+    out = sim('Obiekt123.slx',[0 100]);
+    u_end = out.u.Data(end);
+    for i=1:length(out.u.Data)-1
+        f = f + 0.5 * ((out.e.Data(i+1))^2 + (out.e.Data(i))^2) ...
+            * (out.e.Time(i+1) - out.e.Time(i));
+%     f = f + (out.e.Data(i))^2 * (out.e.Time(i+1) - out.e.Time(i));
+end
+    f = out.ise.Data(end) + isc;
+    
+    
+%     (out.total_error.Data(end) - out.total_error.Data(out.total_error.Time==20))/...
+%         (length(out.total_error.Data)-length(1:out.total_error.Data(out.total_error.Time==20)))
+end
+% len = length(out.e.Data);
+% f = 0;
+% 
+% for i=1:len-1
+%     f = f + 0.5 * ((out.e.Data(i+1))^2 + (out.e.Data(i))^2) ...
+%         * (out.e.Time(i+1) - out.e.Time(i));
+% %     f = f + (out.e.Data(i))^2 * (out.e.Time(i+1) - out.e.Time(i));
+% end
+
+% dla 20 - 100 s -> out.ise.Data(out.ise.Time==20)
+% disp(x);
+% disp(f);
+
+end

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struct>
+    <iterations>17</iterations>
+    <best_fit_vector>0.21751</best_fit_vector>
+    <best_fit_vector>0.19951</best_fit_vector>
+    <best_fit_vector>0.19951</best_fit_vector>
+    <best_fit_vector>0.19933</best_fit_vector>
+    <best_fit_vector>0.19933</best_fit_vector>
+    <best_fit_vector>0.19887</best_fit_vector>
+    <best_fit_vector>0.19887</best_fit_vector>
+    <best_fit_vector>0.19871</best_fit_vector>
+    <best_fit_vector>0.19871</best_fit_vector>
+    <best_fit_vector>0.19866</best_fit_vector>
+    <best_fit_vector>0.19866</best_fit_vector>
+    <best_fit_vector>0.19866</best_fit_vector>
+    <best_fit_vector>0.19866</best_fit_vector>
+    <best_fit_vector>0.19866</best_fit_vector>
+    <best_fit_vector>0.19866</best_fit_vector>
+    <best_fit_vector>0.19866</best_fit_vector>
+    <best_fit_vector>0.19863</best_fit_vector>
+    <best_fit_vector>0.19863</best_fit_vector>
+    <mean_fit_vector>1.31</mean_fit_vector>
+    <mean_fit_vector>0.30847</mean_fit_vector>
+    <mean_fit_vector>0.24777</mean_fit_vector>
+    <mean_fit_vector>0.21332</mean_fit_vector>
+    <mean_fit_vector>0.20558</mean_fit_vector>
+    <mean_fit_vector>0.20138</mean_fit_vector>
+    <mean_fit_vector>0.19996</mean_fit_vector>
+    <mean_fit_vector>0.19928</mean_fit_vector>
+    <mean_fit_vector>0.19892</mean_fit_vector>
+    <mean_fit_vector>0.19909</mean_fit_vector>
+    <mean_fit_vector>0.19874</mean_fit_vector>
+    <mean_fit_vector>0.19871</mean_fit_vector>
+    <mean_fit_vector>0.19896</mean_fit_vector>
+    <mean_fit_vector>0.19872</mean_fit_vector>
+    <mean_fit_vector>0.19868</mean_fit_vector>
+    <mean_fit_vector>0.19911</mean_fit_vector>
+    <mean_fit_vector>0.19867</mean_fit_vector>
+    <mean_fit_vector>0.19867</mean_fit_vector>
+    <solution>0.19863</solution>
+    <solution_index>24</solution_index>
+    <solution_parameters>14.3698</solution_parameters>
+    <solution_parameters>0.711596</solution_parameters>
+    <solution_parameters>5.10805</solution_parameters>
+</struct>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struct>
+    <iterations>11</iterations>
+    <best_fit_vector>0.19726</best_fit_vector>
+    <best_fit_vector>0.19726</best_fit_vector>
+    <best_fit_vector>0.19619</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <best_fit_vector>0.19606</best_fit_vector>
+    <mean_fit_vector>1.337</mean_fit_vector>
+    <mean_fit_vector>0.32133</mean_fit_vector>
+    <mean_fit_vector>0.22267</mean_fit_vector>
+    <mean_fit_vector>0.20637</mean_fit_vector>
+    <mean_fit_vector>0.20112</mean_fit_vector>
+    <mean_fit_vector>0.20062</mean_fit_vector>
+    <mean_fit_vector>0.19853</mean_fit_vector>
+    <mean_fit_vector>0.20081</mean_fit_vector>
+    <mean_fit_vector>0.20079</mean_fit_vector>
+    <mean_fit_vector>0.19608</mean_fit_vector>
+    <mean_fit_vector>0.1965</mean_fit_vector>
+    <mean_fit_vector>0.19607</mean_fit_vector>
+    <solution>0.19606</solution>
+    <solution_index>1</solution_index>
+    <solution_parameters>7.5208</solution_parameters>
+    <solution_parameters>0.77355</solution_parameters>
+    <solution_parameters>2.9181</solution_parameters>
+</struct>
